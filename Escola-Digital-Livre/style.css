@@ -1,0 +1,71 @@
+/*variaveis globais cores e demais elementos do site*/
+
+:root {
+    --color-primary: #4F46E5;  /*COR PRINCIPAL*/
+    --color-primary-dark: #4339ca;  /*versão escura*/
+    --color-text: #1e1b2e; /*cor do texto principal*/
+    --color-text-light: #6b7280; /*cor do texto secundário*/
+    --color-border: #e5e7eb; /*cor da borda*/
+    --color-bg: #fff;
+    --font-main: 'Inter', sans-serif; /*fonte*/
+}   
+/*reset basico remove os espaçamentos padrões do navegador*/
+*{
+    margin: 0; /*espaçamento externo*/
+    padding: 0; /*espaçamento interno*/
+    box-sizing: border-box; /*padding e border não aumentam o tamanho do elemento*/
+}
+
+body {
+    font-family: var(--font-main); /*tipo da fonte do projeto*/
+    
+} 
+/*header*/
+.header {
+    width: 100%;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border); /* borda inferior*/
+    position: sticky; /*header "gruda" no topo ao rolar a pagina*/
+    top: 0;
+    z-index: 100; /* garante que o header fique acima de outros elementos no caso ficando fixo */
+}
+    .header-container {
+        max-width: 1200px; /* largura máxima do conteudo */
+        margin: 0 auto; /* centraliza o conteudo */
+        padding: 16px  24px; /* espaçamento interno do header */;
+        display: flex; /* organiza os elementos em linha */
+        align-items: center; /* alinha os elementos verticalmente */
+        justify-content: space-between; /* os coisos ficam nas pontas*/
+        gap: 24px; /* espaçamento entre os elementos */
+    }
+/*logo*/
+.logo {
+    display: flex; /* organiza os elementos em linha */
+    align-items: center; /* alinha os elementos verticalmente */
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 45px; /* largura da logo */
+    height: 45px; /* altura da logo */
+    object-fit: contain; /* garante que a imagem não distorça */
+}
+
+.logo-text {
+    display: flex; /* organiza os elementos em linha */
+    flex-direction: column; /* titulo em cima,subtitulo embaixo */
+}
+
+.logo-title {
+    font-size: 16px; /* tamanho da fonte do titulo */
+    font-weight: 700; /* negrito */
+    color: var(--color-text);
+}
+
+.logo-subtitle {
+    font-size: 12px; /* tamanho da fonte do subtitulo */
+    font-weight: 400; /* normal */
+    color: var(--color-text-light);
+}
+    
