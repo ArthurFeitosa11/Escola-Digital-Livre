@@ -68,4 +68,83 @@ body {
     font-weight: 400; /* normal */
     color: var(--color-text-light);
 }
-    
+
+/* Navegação Menu */
+.main-nav {
+    display: flex; /* organiza os elementos em linha */
+    align-items: center; /* alinha os elementos verticalmente */
+    gap: 32px; /* espaçamento entre os elementos */
+}
+
+.nav-link {
+    text-decoration: none; /* remove o sublinhado */
+    font-size: 14px; /* tamanho da fonte */
+    font-weight: 500; /* peso da fonte */
+    color: var(--color-text); /* cor do texto */
+    transition: color 0.2s ease;/*muda a cor suavemente */
+}
+
+.nav-link:hover {
+    color: #bf05ee /* muda a cor do texto ao passar o mouse */
+}
+
+.nav-link.active {
+    color: #bf05ee; /* muda a cor do texto ao passar o mouse */
+    font-weight: 600; /* deixa o texto em negrito */
+}
+
+/*Ações header (busca + botão)*/
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-box {
+    position: relative; /* para posicionar o botão de busca */
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    font-family: var(--font-main);
+    width: 200px;
+    padding: 10px 40px 10px 16px; /* espaço estra a direita para caber o icone de pesquisa */
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none; /* remove a borda azul do navegador*/
+}
+
+.search-box input:focus {
+    border-color: var(--color-primary); /* muda a cor da borda ao focar */
+}
+
+.search-box input::placeholder {
+    color: var(--color-text-light); /* cor do placeholder */
+}
+
+.search-icon {
+    position: absolute; /* para posicionar o icone de pesquisa */
+    right: 14px; /* distancia do icone da borda direita */
+    fill: var(--color-text-light); /* cor do icone */
+    pointer-events: none; /* para que o icone não interfira ou atrapalheno clique do input */
+}
+
+.btn-primary {
+    font-family: var(--font-main);
+    background-color: var(--color-primary); /* cor de fundo do botão */
+    color: #fff; /* cor do texto do botão */
+    border: none; /* remove a borda do botão */
+    padding: 10px 20px; /* espaçamento interno do botão */
+    border-radius: 8px; /* arredonda os cantos do botão */
+    font-size: 14px; /* tamanho da fonte do botão */
+    font-weight: 600;
+    cursor: pointer; /* muda o cursor para mostrar que e clicavel ao passar o mouse */
+    white-space: nowrap; /* evita que o texto quebre em várias linhas */ 
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark); /* muda a cor de fundo do botão ao passar o mouse */
+}
+   
